@@ -1,4 +1,3 @@
-#"Develop and report on a computer program that prompts the user for their date of birth, your program should then calculate what day of the week they were born on. You must use a modular approach to this challenge, there must be a function defined as calculate_birthday() that takes three parameters, day, month and year respectively as integers and return the day of the week as a string"
 def calculator(day, month, year, name):
   #zeller's congruence formula applied
   total_days = (day + (int((13*(month + 1))/5)) + year + (int(year/4)) - (int(year/100)) + (int(year/400)))
@@ -20,13 +19,6 @@ def calculator(day, month, year, name):
     print("",name ,"was born on a sunday." )
   else:
     print("oh no")
-  
-  #days_since_year = year - 1900
-  #leap_years_since_date = days_since_year//4
-  #days_since_year = days_since_year*365
-  #print("there have been", days_since_year + leap_years_since_date, "days since your date and jan 1 1900")
-  #print("there have been", month,"months since your date and jan 1 1900")
-  #print("there have been", day,"days since your date and jan 1 1900")
 
 def menu():
   invalid_year = 0
@@ -65,3 +57,4 @@ def menu():
     #enter calculator
   calculator(day, month, year, name)
 menu()
+
